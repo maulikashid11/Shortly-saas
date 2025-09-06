@@ -17,7 +17,7 @@ const Navbar = () => {
         if (session?.user) {
             registerUser(session);
         }
-    }, [session])
+    }, [session,registerUser]);
 
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)

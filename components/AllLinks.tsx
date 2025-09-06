@@ -41,7 +41,7 @@ const AllLinks: React.FC<AllLinksProps> = ({ links }) => {
         links.map((link: LinkType) => (
           <div key={link._id} className='flex mt-10'>
             <a className='w-1/2' target='_blank' rel='noopener noreferrer' href={link.originalUrl}>{link.originalUrl}</a>
-            <a className='w-1/2' target='_blank' rel='noopener noreferrer' href={`http://localhost:3000/${link.code}`}>{`http://localhost:3000/${link.code}`}</a>
+            <a className='w-1/2' target='_blank' rel='noopener noreferrer' href={`https://shortly-ochre-delta.vercel.app/${link.code}`}>{`https://shortly-ochre-delta.vercel.app/${link.code}`}</a>
             <button
               className='cursor-pointer hover:text-red-500 duration-250'
               onClick={() => handleDelete(link._id)}

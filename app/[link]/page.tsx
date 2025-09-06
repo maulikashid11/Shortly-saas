@@ -10,12 +10,12 @@ type Params = {
 const Page = ({ params }: { params: Promise<Params> }) => {
   const { link } = React.use(params);
 
-  const [linkState, linkAction, isPending] = useActionState(
+  const [linkState, linkAction] = useActionState(
     getLinkByCode,
     { success: false, message: ""}
   );
 
-  const [_, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
   useEffect(() => {
     if (link) {
       startTransition(() => {
